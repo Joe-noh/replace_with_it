@@ -1,10 +1,10 @@
 $(function () {
   $(document.body).click(function (e) {
     target = $(e.target);
-    console.log(target.text());
+    textLength = target.text().length;
+
     if ((e.target.children.length == 0) &&
-        (4 < target.text().length) &&
-        (target.text().length < 20)) {
+        (4 <= textLength) && (textLength <= 20)) {
       target.text("＼\\٩('ω')و/／");
     }
   });
